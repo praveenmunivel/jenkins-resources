@@ -17,7 +17,6 @@ pipeline {
       steps {
         sleep 5
         echo 'Slept'
-        retry(count: 3)
       }
     }
 
