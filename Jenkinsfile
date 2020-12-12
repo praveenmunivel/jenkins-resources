@@ -8,8 +8,25 @@ pipeline {
     }
 
     stage('Build') {
-      steps {
-        echo 'Build Success'
+      parallel {
+        stage('Build') {
+          steps {
+            echo 'Build Success'
+          }
+        }
+
+        stage('Parallel Build') {
+          steps {
+            echo 'Running Parallely'
+          }
+        }
+
+        stage('2nd Parallel') {
+          steps {
+            echo 'Second Parallel'
+          }
+        }
+
       }
     }
 
