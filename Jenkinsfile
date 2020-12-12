@@ -9,15 +9,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''echo \'PlaceHolder\'
-sh \'echo edited placeholder\''''
+        sh 'echo \'PlaceHolder\''
       }
     }
 
     stage('Test') {
       steps {
-        sh '''sh \'sleep 5\'
-sh \'echo Success!!!\''''
+        sh 'echo \'Success!!!\''
       }
     }
 
