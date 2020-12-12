@@ -9,19 +9,21 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'echo \'PlaceHolder\''
+        echo 'Build Success'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'echo \'Success!!!\''
+        sleep 5
+        echo 'Slept'
+        retry(count: 3)
       }
     }
 
     stage('Deploy') {
       steps {
-        sh 'echo \'Placeholder\''
+        echo 'Deployed'
       }
     }
 
